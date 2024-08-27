@@ -1,5 +1,27 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "urls": {
+    "baseUrl": "https://www.saucedemo.com/v1/index.html",
+    "inventoryUrl": "inventory"
+  },
+
+  "testData": {
+    "userName": "standard_user",
+    "nonExistingUserName": "user",
+    "password": "secret_sauce",
+    "wrongPassword": "secret"
+  },
+
+  "titles": {
+    "loginPageTitle": "Swag Labs"
+  },
+
+  "messages": {
+    "missingUserNameMessage": "Username is required",
+    "missingPasswordMessage": "Password is required",
+    "wrongUserNameOrPasswordMessage": "Username and password do not match any user in this service"
+  },
+
+  "labels": {
+    "productLabelText": "Products"
+  }
 }
