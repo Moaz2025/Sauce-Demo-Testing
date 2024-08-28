@@ -1,19 +1,15 @@
 Cypress.Commands.add("userName", () => {
-  cy.get("#user-name");
+  cy.get(data.textboxes.userNameTextbox);
 });
 
 Cypress.Commands.add("password", () => {
-  cy.get("#password");
+  cy.get(data.textboxes.passwordTextBox);
 });
 
 Cypress.Commands.add("loginButton", () => {
-  cy.get("#login-button").click();
+  cy.get(data.buttons.loginButton).click();
 });
 
 Cypress.Commands.add("loginErrorLabel", () => {
-  cy.get('[data-test="error"]');
-});
-
-Cypress.Commands.add("productLabel", () => {
-  cy.get(".product_label");
+  cy.get(data.labels.loginErrorLabel);
 });
