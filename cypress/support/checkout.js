@@ -21,3 +21,11 @@ Cypress.Commands.add("lastNameTextbox", () => {
 Cypress.Commands.add("postalCodeTextbox", () => {
   cy.get(data.textboxes.postalCodeTextbox);
 });
+
+Cypress.Commands.add("finishButton", () => {
+  cy.get(data.buttons.finishButton).click();
+});
+
+Cypress.Commands.add("checkoutSuccessLabel", () => {
+  cy.get(data.labels.checkoutSuccessLabel);
+});

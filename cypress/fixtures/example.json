@@ -4,12 +4,15 @@
     "inventoryPageUrl": "inventory",
     "loginPageUrl": "index",
     "productUrl": "id=",
-    "checkoutPageUrl": "checkout-step-one"
+    "checkoutInformationPageUrl": "checkout-step-one",
+    "checkoutOverviewPageUrl": "checkout-step-two",
+    "checkoutCompletePageUrl": "checkout-complete"
   },
 
   "testData": {
     "userName": "standard_user",
     "nonExistingUserName": "user",
+    "lockedUserName": "locked_out_user",
     "password": "secret_sauce",
     "wrongPassword": "secret",
     "nameAZ": "Name (A to Z)",
@@ -29,16 +32,19 @@
     "missingUserNameMessage": "Username is required",
     "missingPasswordMessage": "Password is required",
     "wrongUserNameOrPasswordMessage": "Username and password do not match any user in this service",
+    "lockedUserNameMessage": "Sorry, this user has been locked out.",
     "missingFirstNameMessage": "Error: First Name is required",
     "missingLastNameMessage": "Error: Last Name is required",
-    "missingPostalCodeMessage": "Error: Postal Code is required"
+    "missingPostalCodeMessage": "Error: Postal Code is required",
+    "checkoutSuccessMessage": "THANK YOU FOR YOUR ORDER"
   },
 
   "labels": {
     "productLabelText": "Products",
     "loginErrorLabel": "[data-test='error']",
     "productLabel": ".product_label",
-    "checkoutInformationErrorLabel": "[data-test='error']"
+    "checkoutInformationErrorLabel": "[data-test='error']",
+    "checkoutSuccessLabel": ".complete-header"
   },
 
   "buttons": {
@@ -51,12 +57,13 @@
     "removeProductButton": "[class='btn_secondary cart_button']",
     "continueShoppingButton": ".btn_secondary",
     "checkoutButton": "[class='btn_action checkout_button']",
-    "continueButton": "[class='btn_primary cart_button']"
+    "continueButton": "[class='btn_primary cart_button']",
+    "finishButton": "[class='btn_action cart_button']"
   },
 
   "textboxes": {
     "userNameTextbox": "#user-name",
-    "passwordTextBox": "#password",
+    "passwordTextbox": "#password",
     "firstNameTextbox": "#first-name",
     "lastNameTextbox": "#last-name",
     "postalCodeTextbox": "#postal-code"

@@ -1,9 +1,9 @@
-Cypress.Commands.add("userName", () => {
+Cypress.Commands.add("userNameTextbox", () => {
   cy.get(data.textboxes.userNameTextbox);
 });
 
-Cypress.Commands.add("password", () => {
-  cy.get(data.textboxes.passwordTextBox);
+Cypress.Commands.add("passwordTextbox", () => {
+  cy.get(data.textboxes.passwordTextbox);
 });
 
 Cypress.Commands.add("loginButton", () => {

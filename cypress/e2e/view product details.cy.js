@@ -8,8 +8,8 @@ describe("", () => {
   beforeEach(() => {
     cy.visit(data.urls.baseUrl);
     cy.title().should("eq", data.titles.loginPageTitle);
-    cy.userName().type(data.testData.userName);
-    cy.password().type(data.testData.password);
+    cy.userNameTextbox().type(data.testData.userName);
+    cy.passwordTextbox().type(data.testData.password);
     cy.loginButton();
     cy.url().should("include", data.urls.inventoryPageUrl);
     cy.productLabel().should("contains.text", data.labels.productLabelText);
@@ -20,28 +20,19 @@ describe("", () => {
     let firstproductNameAtDetailsPage,
       firstproductPriceAtDetailsPage,
       firstproductDescriptionAtDetailsPage;
-    cy.productsList()
-      .product()
-      .first()
-      .productName()
+    cy.productName()
       .first()
       .invoke("text")
       .then((text) => {
         firstProductName = text.trim();
       });
-    cy.productsList()
-      .product()
-      .first()
-      .productPrice()
+    cy.productPrice()
       .first()
       .invoke("text")
       .then((text) => {
         firstProductPrice = parseFloat(text.replace("$", "").trim());
       });
-    cy.productsList()
-      .product()
-      .first()
-      .productDescription()
+    cy.productDescription()
       .first()
       .invoke("text")
       .then((text) => {

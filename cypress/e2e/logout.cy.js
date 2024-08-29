@@ -1,3 +1,6 @@
+import Login from "../support/POM/login-pom";
+const login = new Login();
+
 describe("logout", () => {
   before(() => {
     cy.fixture("example").then(function (data) {
@@ -6,16 +9,14 @@ describe("logout", () => {
   });
 
   beforeEach(() => {
-    cy.visit(data.urls.baseUrl);
-    cy.title().should("eq", data.titles.loginPageTitle);
+    login.loginPage();
   });
 
   it("Check that the user can logout successfully", () => {
-    cy.userName().type(data.testData.userName);
-    cy.password().type(data.testData.password);
-    cy.loginButton();
-    cy.url().should("include", data.urls.inventoryPageUrl);
-    cy.productLabel().should("contains.text", data.labels.productLabelText);
+    login.userName();
+    login.password();
+    login.loginButton();
+    login.inventoryPageCheck();
     cy.menuButton();
     cy.logoutButton();
     cy.url().should("include", data.urls.loginPageUrl);
