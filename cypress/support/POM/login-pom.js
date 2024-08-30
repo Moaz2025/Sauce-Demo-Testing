@@ -32,5 +32,11 @@ class Login {
     cy.url().should("include", data.urls.inventoryPageUrl);
     cy.productLabel().should("contains.text", data.labels.productLabelText);
   }
+
+  logout() {
+    cy.menuButton();
+    cy.logoutButton();
+    cy.url().should("include", data.urls.loginPageUrl);
+  }
 }
 export default Login;

@@ -17,8 +17,6 @@ describe("logout", () => {
     login.password();
     login.loginButton();
     login.inventoryPageCheck();
-    cy.menuButton();
-    cy.logoutButton();
-    cy.url().should("include", data.urls.loginPageUrl);
+    login.logout();
   });
 });
